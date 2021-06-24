@@ -3,9 +3,9 @@
 const express = require("express");
 const app = express();
 
-app.get("/", function(req, res) {
-  res.send("go to /posts to see posts");
-});
+// app.get("/", function(req, res) {
+//   res.send("go to /posts to see posts");
+// });
 
 app.listen(4000, function() {
   console.log("Example app listening on port 4000!");
@@ -19,7 +19,7 @@ const connection = mysql.createConnection({
   database: "test"
 });
 
-app.get("/posts", function(req, res) {
+app.get("/", function(req, res) {
     connection.query("select * from profile", function(
       error,
       results,
